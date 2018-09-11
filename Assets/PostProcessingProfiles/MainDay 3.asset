@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a3bdb2cd68f901469e7cc149151eb49, type: 3}
-  m_Name: Main 2
+  m_Name: MainDay 3
   m_EditorClassIdentifier: 
   debugViews:
     m_Enabled: 1
@@ -120,27 +120,27 @@ MonoBehaviour:
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
-        postExposure: 2.13
-        temperature: 13.1
+        postExposure: 0
+        temperature: 0
         tint: 0
         hueShift: 0
-        saturation: 0.861
-        contrast: 0.795
+        saturation: 1
+        contrast: 1
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
         blue: {x: 0, y: 0, z: 1}
         currentEditingChannel: 0
       colorWheels:
-        mode: 1
+        mode: 0
         log:
-          slope: {r: 1, g: 0.8996919, b: 0.6531794, a: 0}
-          power: {r: 0.32784027, g: 0.37273452, b: 1, a: 0.0647482}
-          offset: {r: 1, g: 0.9754549, b: 0.7744318, a: 0.02877698}
+          slope: {r: 1, g: 1, b: 1, a: 0}
+          power: {r: 1, g: 1, b: 1, a: 0}
+          offset: {r: 1, g: 1, b: 1, a: 0}
         linear:
-          lift: {r: 1, g: 1, b: 1, a: 0}
-          gamma: {r: 1, g: 1, b: 1, a: 0}
-          gain: {r: 1, g: 1, b: 1, a: 0}
+          lift: {r: 0.6602367, g: 0.7266578, b: 1, a: 0.039855123}
+          gamma: {r: 1, g: 0.79803663, b: 0.35886264, a: -0.2826087}
+          gain: {r: 1, g: 0.9728436, b: 0.9006312, a: 0.45652175}
       curves:
         master:
           curve:
@@ -331,10 +331,10 @@ MonoBehaviour:
   dithering:
     m_Enabled: 0
   monitors:
-    currentMonitorID: 0
+    currentMonitorID: 1
     refreshOnPlay: 0
-    histogramMode: 3
-    waveformExposure: 0.12
+    histogramMode: 4
+    waveformExposure: 0.3
     waveformY: 0
     waveformR: 1
     waveformG: 1

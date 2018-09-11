@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a3bdb2cd68f901469e7cc149151eb49, type: 3}
-  m_Name: Main
+  m_Name: MainNight
   m_EditorClassIdentifier: 
   debugViews:
     m_Enabled: 1
@@ -71,8 +71,8 @@ MonoBehaviour:
   depthOfField:
     m_Enabled: 1
     m_Settings:
-      focusDistance: 1.75
-      aperture: 5.6
+      focusDistance: 0.37
+      aperture: 32
       focalLength: 50
       useCameraFov: 0
       kernelSize: 1
@@ -100,14 +100,14 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.4
+        intensity: 0.47
         threshold: 1.65
         softKnee: 0.467
         radius: 5.3
-        antiFlicker: 0
+        antiFlicker: 1
       lensDirt:
         texture: {fileID: 2800000, guid: 3884f7a2d04ffe8409ad9200b275896f, type: 3}
-        intensity: 33.63
+        intensity: 40.03
   colorGrading:
     m_Enabled: 1
     m_Settings:
@@ -121,11 +121,11 @@ MonoBehaviour:
         neutralWhiteClip: 10
       basic:
         postExposure: 0
-        temperature: 13.1
+        temperature: 0
         tint: 0
         hueShift: 0
-        saturation: 0.861
-        contrast: 0.795
+        saturation: 1
+        contrast: 1
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
@@ -138,9 +138,9 @@ MonoBehaviour:
           power: {r: 1, g: 1, b: 1, a: 0}
           offset: {r: 1, g: 1, b: 1, a: 0}
         linear:
-          lift: {r: 0.7974614, g: 0.75161123, b: 1, a: 0.01438849}
-          gamma: {r: 1, g: 0.98832446, b: 0.7523379, a: 0.05755396}
-          gain: {r: 0.8090569, g: 0.9677795, b: 1, a: 0}
+          lift: {r: 1, g: 1, b: 1, a: -0.010869565}
+          gamma: {r: 1, g: 1, b: 1, a: 0.10869565}
+          gain: {r: 0.7246406, g: 0.6075151, b: 1, a: 0}
       curves:
         master:
           curve:
@@ -331,10 +331,10 @@ MonoBehaviour:
   dithering:
     m_Enabled: 0
   monitors:
-    currentMonitorID: 0
+    currentMonitorID: 1
     refreshOnPlay: 0
-    histogramMode: 3
-    waveformExposure: 0.12
+    histogramMode: 4
+    waveformExposure: 0.3
     waveformY: 0
     waveformR: 1
     waveformG: 1
