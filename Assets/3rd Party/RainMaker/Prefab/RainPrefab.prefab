@@ -43,6 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 470886}
   - component: {fileID: 11437536}
+  - component: {fileID: 114182391899935480}
   m_Layer: 0
   m_Name: RainPrefab
   m_TagString: Untagged
@@ -105,7 +106,7 @@ Transform:
   m_GameObject: {fileID: 160098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.7754, y: 3.7754, z: 3.7754}
   m_Children:
   - {fileID: 413392}
   - {fileID: 498708}
@@ -169,7 +170,7 @@ MonoBehaviour:
   RainSoundLight: {fileID: 8300000, guid: c980eda1ec9b9ff4b930005976b00f41, type: 3}
   RainSoundMedium: {fileID: 8300000, guid: 3359e9d10af08ca46ae396298dbd1ed9, type: 3}
   RainSoundHeavy: {fileID: 8300000, guid: db1471092e49b7445bfbd374a17ea61a, type: 3}
-  RainIntensity: 1
+  RainIntensity: 0
   RainFallParticleSystem: {fileID: 19831730}
   RainExplosionParticleSystem: {fileID: 19824492}
   RainMistParticleSystem: {fileID: 19836512}
@@ -179,8 +180,8 @@ MonoBehaviour:
   WindZone: {fileID: 18204160}
   WindSpeedRange: {x: 50, y: 100, z: 500}
   WindChangeInterval: {x: 5, y: 30}
-  EnableWind: 1
-  RainHeight: 10
+  EnableWind: 0
+  RainHeight: 0
   RainForwardOffset: 0
   RainMistHeight: 3
 --- !u!114 &11482444
@@ -457,7 +458,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -773,7 +774,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 5000
+    maxNumParticles: 50000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -4999,8 +5000,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.075
-      minScalar: 0.025
+      scalar: 0.6
+      minScalar: 0.3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5261,7 +5262,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 5000
+    maxNumParticles: 50000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -13847,3 +13848,15 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 160098}
   m_IsPrefabAsset: 1
+--- !u!114 &114182391899935480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d614ef3376fca4789476eacf8b6c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToMaxRain: 30
