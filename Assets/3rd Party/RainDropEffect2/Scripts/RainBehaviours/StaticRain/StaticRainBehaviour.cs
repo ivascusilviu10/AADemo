@@ -232,7 +232,7 @@ public class StaticRainBehaviour : RainBehaviourBase {
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
-        Camera rainCam = GetComponentInParent<Camera>();
+        Camera rainCam = transform.parent.GetComponentInParent<Camera>();
 
         if (rainCam == null)
             return;
@@ -249,8 +249,8 @@ public class StaticRainBehaviour : RainBehaviourBase {
 
         if (UnityEditor.Selection.Contains(gameObject))
         {
-            float h = rainCam.orthographicSize * 2f;
-            float w = h * rainCam.aspect;
+            float h = rainCam.scaledPixelHeight; 
+            float w = h * rainCam.scaledPixelWidth;
             Vector3 p = transform.position - (Vector3.up * h * Variables.SpawnOffsetY) - (Vector3.right * w * Variables.SpawnOffsetX);
 
             Vector3 size = new Vector3(

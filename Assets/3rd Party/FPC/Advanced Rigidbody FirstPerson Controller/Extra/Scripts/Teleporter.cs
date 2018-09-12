@@ -25,9 +25,12 @@ public class Teleporter : MonoBehaviour
 
 	void OnTriggerEnter(Collider col)
     {
-        if (col.attachedRigidbody)
-            col.attachedRigidbody.velocity = Vector3.zero;
+        //if (col.attachedRigidbody)
+        //    col.attachedRigidbody.velocity = Vector3.zero;
 
         col.transform.position = point.transform.position;
+        Debug.Log(col.attachedRigidbody.velocity);
+        col.attachedRigidbody.velocity = -col.attachedRigidbody.velocity;
+        Debug.Log(col.attachedRigidbody.velocity);
     }
 }

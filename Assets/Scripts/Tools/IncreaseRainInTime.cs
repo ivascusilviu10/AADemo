@@ -20,8 +20,6 @@ public class IncreaseRainInTime : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         m_timer += Time.deltaTime;
-        Debug.Log(m_timer);
-        m_rainScript.RainIntensity = Utils.Remap(m_timer, 0, TimeToMaxRain, 0, 1);
-
+        m_rainScript.RainIntensity = Utils.Remap(m_timer, 0, TimeToMaxRain, 0, 1);        
 	}
 }
