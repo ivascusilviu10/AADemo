@@ -382,8 +382,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1807354702950410}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.51, y: 1.791, z: 5.741}
+  m_LocalRotation: {x: -0, y: 0.7070489, z: -0, w: -0.70716476}
+  m_LocalPosition: {x: -0.062, y: 1.794, z: 6.435}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4261333434736420}
@@ -392,7 +392,7 @@ Transform:
   - {fileID: 4263627322403246}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -449.991, z: 0}
 --- !u!4 &4554210075465488
 Transform:
   m_ObjectHideFlags: 1
@@ -828,7 +828,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 4234503277280378}
   m_AABB:
     m_Center: {x: 0.000007649258, y: 0.018257322, z: -5.820766e-10}
-    m_Extent: {x: 0.000114118186, y: 0.011742687, z: 0.003700505}
+    m_Extent: {x: 0.000114118186, y: 0.011742687, z: 0.001}
   m_DirtyAABB: 0
 --- !u!145 &145673620467514268
 SpringJoint:
@@ -839,9 +839,9 @@ SpringJoint:
   m_ConnectedBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.44999993, y: 1.74, z: 5.235}
+  m_ConnectedAnchor: {x: -0.0020828433, y: 1.743, z: 5.92899}
   serializedVersion: 2
-  m_Spring: 4000
+  m_Spring: 8000
   m_Damper: 20
   m_MinDistance: 0
   m_MaxDistance: 0

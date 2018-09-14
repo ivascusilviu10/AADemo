@@ -11,17 +11,27 @@ public class LightFlicker : MonoBehaviour
     public Mode FlickerMode = LightFlicker.Mode.Random;
     public float MinValue = 0.1f;
     public float MaxValue = 2;
-    //PRIVATES
+    [Tooltip("This works only for random flicker mode")]
+    public float FlickerFrequency = 5;
+    [Tooltip("This works only for random flicker mode")]
+    public float FlickerDuration = 0.5f;
     public enum Mode
     {
         Random,
         Sine
     };
+    //PRIVATES
+    private float m_FlickerOffTimer = 0;
+    private float m_FlickerOnTimer = 0;
     private Light m_thisLight;
+    private bool m_IsLightFlickering = false;
     // Use this for initialization
     void Start()
     {
         m_thisLight = GetComponent<Light>();
+        m_FlickerOffTimer = FlickerFrequency;
+        m_FlickerOnTimer = FlickerDuration;
+
     }
 
     // Update is called once per frame
@@ -31,10 +41,27 @@ public class LightFlicker : MonoBehaviour
         switch (FlickerMode)
         {
             case Mode.Random:
-                LightValue = UnityEngine.Random.Range(MinValue, MaxValue);
+                if (!m_IsLightFlickering)
+                {
+                    m_FlickerOffTimer -= Time.deltaTime; 
+                }
+                else
+                {
+                    m_FlickerOnTimer -= Time.deltaTime;
+                }                
+                if (m_FlickerOffTimer <= 0)
+                {
+                    m_IsLightFlickering = true; 
+                    m_FlickerOffTimer = FlickerDuration;
+                    LightValue = UnityEngine.Random.Range(MinValue, MaxValue);
+                }
+                if (m_FlickerOnTimer <= 0)
+                {
+                    LightValue = MinValue;
+                }
                 break;
             case Mode.Sine:
-                LightValue = Utils.Remap(Mathf.Sin(Time.time) * 0.5f + 0.5f,0,1,MinValue,MaxValue);
+                LightValue = Utils.Remap(Mathf.Sin(Time.time) * 0.5f + 0.5f, 0, 1, MinValue, MaxValue);
                 break;
             default:
                 break;
@@ -42,5 +69,5 @@ public class LightFlicker : MonoBehaviour
         m_thisLight.intensity = LightValue;
     }
 
-    
+
 }
